@@ -950,7 +950,6 @@ footer .content li a {
 
 footer .content li:hover {
     background-color: rgb(9, 119, 90);
-
 }
 
 footer .content p {
@@ -958,5 +957,4 @@ footer .content p {
     padding-top: 10px;
     text-transform: uppercase;
     color: rgba(6, 111, 83, 0.642);
-
 }
