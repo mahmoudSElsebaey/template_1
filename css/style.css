@@ -44,7 +44,7 @@ img:hover {
     position: fixed;
     z-index: 100;
     background-color: #fff;
-    /* opacity: .5; */
+    opacity: .9;
     box-shadow: 5px 5px 5px rgba(3, 109, 38, 0.349);
 }
 
@@ -59,7 +59,7 @@ img:hover {
 
 .header_section a {
     color: rgb(9, 119, 90);
-    opacity: 1;
+    /* text-shadow: 1px 1px 1px black; */
     /* transition: 3s ease-in-out; */
 }
 
@@ -193,8 +193,9 @@ img:hover {
     line-height: 1.5;
     float: left;
     margin-left: 50px;
-    border: 1px solid rgba(0, 0, 0, 0.407);
-    transition: .5s;
+    border: 1px solid rgba(34, 215, 58, 0.316);
+    transition: 1s;
+    position: relative;
 }
 
 .mydiv h2 {
@@ -217,17 +218,40 @@ img:hover {
     color: rgba(17, 4, 255, 0.637);
 }
 
-.mydiv:hover {
-    background-color: rgba(34, 215, 58, 0.174);
-    border: 2px solid rgb(9, 119, 90);
+.mydiv::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: rgba(34, 215, 58, 0.316);
+    /* border: 1px solid rgb(9, 119, 90); */
+    opacity: .9;
+    transition: 1s;
 }
+
+.mydiv:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.mydiv:hover>h4 {
+    color: rgb(9, 249, 185);
+}
+
+/* .mydiv:hover > p{
+    color:rgba(9, 249, 185, 0.539);
+} */
+
+
 
 /* ***************************************************************** */
 
 .container_featuers_works {
     width: 100%;
     height: 1100px;
-    background-color: rgba(0, 0, 0, 0.141);
+    background-color: rgba(93, 166, 20, 0.246);
 }
 
 .container_featuers_works h3 {
@@ -245,13 +269,67 @@ img:hover {
     float: left;
     width: 24%;
     height: 330px;
+    position: relative;
     margin: 30px 30px 0px 60px;
+}
+
+.container_featuers_works .overlay {
+    width: 105%;
+    height: 95%;
+    margin-top: -2%;
+    margin-left: -2%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.904);
+    transition: .5s;
+    /* visibility: hidden; */
+    /* display: none;  */
+}
+
+.container_featuers_works .overlay .overlay_content {
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 2;
+    /* border: 1px solid rgba(240, 0, 0, 0.938); */
+}
+
+.container_featuers_works .overlay .overlay_content p {
+    color: rgb(77, 77, 238);
+}
+
+.container_featuers_works .overlay .overlay_content h2 {
+    color: #fff;
+    font-size: 20px;
+}
+
+.container_featuers_works .overlay .overlay_content i {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: larger;
+    color: rgb(13, 13, 245);
+    padding: 10px;
+    background-color: rgb(46, 95, 174);
+}
+
+.container_featuers_works .overlay:hover {
+    opacity: .8;
+    visibility: visible;
 }
 
 /* ******************************************************************* */
 
 .mydiv_offr {
     height: 200px;
+    transition: .5s;
 }
 
 .mydiv_offr i {
@@ -273,7 +351,6 @@ img:hover {
 .mydiv_offr .inside_mydiv h4 {
     font-size: 25px;
     font-weight: 600;
-
 }
 
 .mydiv_offr .inside_mydiv p {
@@ -283,9 +360,38 @@ img:hover {
 
 }
 
-.mydiv_offr:hover {
-    background-color: rgba(2, 248, 35, 0.174);
-    border: 2px solid rgb(9, 119, 90);
+.mydiv_offr::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    background-color: rgba(34, 215, 58, 0.316);
+    opacity: .9;
+    transition: 1s;
+}
+
+.mydiv_offr:hover::after {
+    width: 50%;
+    height: 100%;
+}
+
+.mydiv_offr::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 0;
+    height: 100%;
+    background-color: rgba(34, 215, 58, 0.316);
+    opacity: .9;
+    transition: 1s;
+}
+
+.mydiv_offr:hover::before {
+    width: 50%;
+    height: 100%;
 }
 
 /************************************************************************************************/
@@ -306,6 +412,7 @@ img:hover {
 .content_left_section .line_under_title {
     margin-left: 0;
     margin-top: -5px;
+    margin-bottom: 50px;
 }
 
 .content_left_section p {
@@ -324,8 +431,46 @@ img:hover {
     color: rgba(9, 119, 90, 0.5);
 }
 
-.content_right_section img {
+.content_right_section .image_right {
+    width: 65%;
+    height: 100%;
     margin-left: 50px;
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+.content_right_section .image_right::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    opacity: .5;
+    transition: 1s;
+    background-color: rgba(34, 215, 58, 0.316);
+}
+
+.content_right_section .image_right:hover::after {
+    width: 50%;
+    height: 100%;
+}
+
+.content_right_section .image_right::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    opacity: .8;
+    transition: 1s;
+    background-color: rgba(34, 215, 58, 0.316);
+}
+
+.content_right_section .image_right:hover::before {
+    width: 50%;
+    height: 100%;
 }
 
 /*************************************************** section 5 ***************************************************/
@@ -333,6 +478,7 @@ img:hover {
     width: 100%;
     height: 400px;
     background-image: url("../images/ddd.jpg");
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100%, 100%;
 }
@@ -388,7 +534,7 @@ img:hover {
 .content_sec6 .parent {
     width: 330px;
     height: 380px;
-    border: 1px solid rgba(0, 0, 0, 0.33);
+    border: 1px solid rgba(34, 215, 58, 0.316);
     text-align: center;
     font-size: 30px;
     line-height: 1.5;
@@ -398,6 +544,7 @@ img:hover {
     color: rgba(0, 0, 0, 0.54);
     transition: .5s;
     float: left;
+    position: relative;
 }
 
 .parent_title {
@@ -419,9 +566,10 @@ img:hover {
     transition: .5s;
 }
 
+/* 
 .content_sec6 .circle_price:hover, .parent_title:hover {
     color: brown;
-}
+} */
 
 .content_sec6 .price {
     padding-top: 40px;
@@ -447,13 +595,30 @@ img:hover {
     transition: .5s;
 }
 
-.content_sec6 .parent:hover {
-    background-color: rgba(34, 215, 58, 0.174);
-    border: 2px solid rgb(9, 119, 90);
+
+.parent::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(34, 215, 58, 0.316);
+    opacity: .9;
+    transition: 1s;
+}
+
+.parent:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.parent:hover>.circle_price, .parent:hover>.parent_title {
+    color: rgb(231, 0, 0);
 }
 
 .content_sec6 .btn:hover {
-    background-color: rgba(9, 119, 90, 0.208);
+    background-color: rgba(6, 138, 103, 0.439);
 }
 
 /***********************************************  section 7  **********************************************/
@@ -462,6 +627,7 @@ img:hover {
     width: 100%;
     height: 400px;
     background: url(../images/playground.jpg);
+    background-attachment: fixed;
     /* background-repeat: no-repeat;
     background-size: cover; */
     border: 1px solid black;
@@ -526,6 +692,107 @@ img:hover {
     /* border: 1px solid rgb(87, 53, 53); */
 }
 
+/****************************************************** section 88 Our team    *****************************************************/
+
+.container_sec88 .content {
+    width: 100%;
+    height: 500px;
+    margin-top: 100px;
+    /* border: 1px solid red; */
+}
+
+.container_sec88 .content .parent_div {
+    width: 25%;
+    height: 330px;
+    text-align: center;
+    position: relative;
+    background-color: rgba(6, 138, 103, 0.439);
+    float: left;
+    margin-left: 70px;
+    /* border: 1px solid red; */
+}
+
+.container_sec88 .content .parent_div img {
+    margin: 5%;
+}
+
+.container_sec88 .content .parent_div p {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+.container_sec88 .content .parent_div span {
+    text-transform: uppercase;
+    font-size: smaller;
+    /* color: rgba(5, 135, 101, 0.668); */
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.container_sec88 .content .parent_div .overlay88 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .5s;
+    z-index: 15;
+}
+
+.container_sec88 .content .parent_div .overlay88 ul {
+    list-style: none;
+    margin-top: 5%;
+    margin-right: 5%;
+    float: right;
+}
+
+.container_sec88 .content .parent_div .overlay88 ul li {
+    width: 45px;
+    height: 50px;
+    text-align: center;
+    background-color: rgb(22, 140, 136);
+    padding-top: 15px;
+}
+
+.container_sec88 .content .parent_div .overlay88 ul li a {
+    color: rgb(0, 245, 4);
+    font-size: larger;
+    text-shadow: 1px 1px 1px black;
+}
+
+.container_sec88 .content .parent_div .overlay88:hover {
+    opacity: 1;
+}
+
+.parent_div::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: .5s;
+    opacity: .5;
+    z-index: 14;
+    background-color: rgba(34, 215, 58, 0.316);
+}
+
+.parent_div:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.parent_div:hover>p {
+    color: rgb(18, 233, 21);
+    text-shadow: 1px 1px 1px black;
+}
+
+.parent_div:hover>span {
+    color: rgb(54, 54, 129);
+}
+
 /****************************************************** section 8 News    *****************************************************/
 
 .container_sec8 {
@@ -561,8 +828,9 @@ img:hover {
     margin-top: 100px;
     margin-left: 50px;
     float: left;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 3px rgba(34, 215, 58, 0.316);
     transition: 1s;
+    position: relative;
     /* border: 1px solid black; */
 }
 
@@ -615,8 +883,22 @@ img:hover {
     font-weight: 600;
 }
 
-.news_container:hover {
-    background-color: rgba(2, 248, 35, 0.174);
+
+.news_container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(34, 215, 58, 0.316);
+    opacity: .9;
+    transition: 1s;
+}
+
+.news_container:hover::after {
+    width: 100%;
+    height: 100%;
 }
 
 /***************************************** Footer section *********************************************/
@@ -625,14 +907,14 @@ img:hover {
 footer {
     width: 100%;
     height: 300px;
-    background-color:  rgba(2, 248, 35, 0.174);
+    background-color: rgba(2, 248, 35, 0.174);
     box-shadow: -10px 0px 8px rgb(131, 216, 131);
 }
 
 footer .content {
     width: 40%;
     height: 80%;
-    margin: auto; 
+    margin: auto;
     border: 1px solid rgba(2, 248, 35, 0);
 }
 
@@ -669,10 +951,11 @@ footer .content li a {
 footer .content li:hover {
     background-color: rgb(9, 119, 90);
 }
-footer .content p {
-text-align: center;
-padding-top: 10px;
-text-transform: uppercase;
-color:rgba(6, 111, 83, 0.642);
 
+footer .content p {
+    text-align: center;
+    padding-top: 10px;
+    text-transform: uppercase;
+    color: rgba(6, 111, 83, 0.642);
+    
 }
