@@ -344,9 +344,8 @@ img:hover {
     opacity: 0;
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.904);
-    transition: .5s;
+    transition: 1s;
     /* visibility: hidden; */
-    /* display: none;  */
 }
 
 .container_featuers_works .overlay .overlay_content {
@@ -377,6 +376,7 @@ img:hover {
     color: rgb(13, 13, 245);
     padding: 10px;
     background-color: rgb(46, 95, 174);
+    cursor: pointer;
 }
 
 .container_featuers_works .overlay:hover {
