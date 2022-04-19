@@ -76,7 +76,7 @@ img:hover {
 
 .header_section .home_link:hover::after {
     width: 80%;
-} 
+}
 
 .header_section .home_link::before {
     content: "";
@@ -91,7 +91,7 @@ img:hover {
 
 .header_section .home_link:hover::before {
     width: 80%;
-} 
+}
 
 /* ******************************************************** */
 .header_section a::after {
@@ -248,10 +248,12 @@ img:hover {
     border: 1px solid rgba(34, 215, 58, 0.316);
     transition: 1s;
     position: relative;
+  
 }
 
 .content_MT {
     margin-top: 100px;
+
 }
 
 .mydiv h2 {
@@ -283,8 +285,9 @@ img:hover {
     height: 0;
     background-color: rgba(34, 215, 58, 0.316);
     /* border: 1px solid rgb(9, 119, 90); */
-    opacity: .9;
+    /* opacity: .9; */
     transition: 1s;
+    z-index: -5;
 }
 
 .mydiv:hover::after {
@@ -426,6 +429,7 @@ img:hover {
     background-color: rgba(34, 215, 58, 0.316);
     opacity: .9;
     transition: 1s;
+    z-index: -5;
 }
 
 .mydiv_offr:hover::after {
@@ -443,6 +447,7 @@ img:hover {
     background-color: rgba(34, 215, 58, 0.316);
     opacity: .9;
     transition: 1s;
+    z-index: -5;
 }
 
 .mydiv_offr:hover::before {
@@ -509,6 +514,7 @@ img:hover {
     opacity: .5;
     transition: 1s;
     background-color: rgba(34, 215, 58, 0.316);
+    /* z-index: -5; */
 }
 
 .content_right_section .image_right:hover::after {
@@ -526,6 +532,7 @@ img:hover {
     opacity: .8;
     transition: 1s;
     background-color: rgba(34, 215, 58, 0.316);
+    /* z-index: -5; */
 }
 
 .content_right_section .image_right:hover::before {
@@ -669,6 +676,7 @@ img:hover {
     background-color: rgba(34, 215, 58, 0.316);
     opacity: .9;
     transition: 1s;
+    z-index: -5;
 }
 
 .parent:hover::after {
@@ -841,6 +849,7 @@ img:hover {
     opacity: .5;
     z-index: 14;
     background-color: rgba(34, 215, 58, 0.316);
+    z-index: -5;
 }
 
 .parent_div:hover::after {
@@ -956,6 +965,7 @@ img:hover {
     background-color: rgba(34, 215, 58, 0.316);
     opacity: .9;
     transition: 1s;
+    z-index: -5;
 }
 
 .news_container:hover::after {
@@ -1019,7 +1029,6 @@ footer .content p {
     padding-top: 10px;
     text-transform: uppercase;
     color: rgba(6, 111, 83, 0.642);
-
 }
 
-/*************************************** Finally of The website  ****************************************/
+/*************************************** Finally , The End of The website  ****************************************/
