@@ -514,7 +514,7 @@ img:hover {
     opacity: .5;
     transition: 1s;
     background-color: rgba(34, 215, 58, 0.316);
-    z-index: -5;
+    /* z-index: -5; */
 }
 
 .content_right_section .image_right:hover::after {
@@ -532,7 +532,7 @@ img:hover {
     opacity: .8;
     transition: 1s;
     background-color: rgba(34, 215, 58, 0.316);
-    z-index: -5;
+    /* z-index: -5; */
 }
 
 .content_right_section .image_right:hover::before {
