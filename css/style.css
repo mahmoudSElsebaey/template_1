@@ -40,7 +40,7 @@ img:hover {
 /* ***************************************  header section ****************************************** */
 .header_section {
     width: 100%;
-    height: 50px;
+    height: 55px;
     position: fixed;
     z-index: 100;
     background-color: #fff;
@@ -59,13 +59,75 @@ img:hover {
 
 .header_section a {
     color: rgb(9, 119, 90);
-    /* text-shadow: 1px 1px 1px black; */
-    /* transition: 3s ease-in-out; */
+    padding: 0 10px;
+    position: relative;
+}
+
+.header_section .home_link::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    width: 80%;
+    height: 3px;
+    background-color: rgb(9, 119, 90);
+    box-shadow: none;
+}
+
+.header_section .home_link:hover::after {
+    width: 80%;
+} 
+
+.header_section .home_link::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+    width: 80%;
+    height: 3px;
+    background-color: rgb(9, 119, 90);
+    box-shadow: none;
+}
+
+.header_section .home_link:hover::before {
+    width: 80%;
+} 
+
+/* ******************************************************** */
+.header_section a::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: rgb(9, 119, 90);
+    box-shadow: 3px 3px 3px rgb(3, 244, 179);
+    transition: .5s;
+}
+
+.header_section a:hover::after {
+    width: 50%;
+}
+
+.header_section a::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    width: 0;
+    height: 3px;
+    background-color: rgb(9, 119, 90);
+    box-shadow: 3px 3px 3px rgb(3, 244, 179);
+    transition: .5s;
+}
+
+.header_section a:hover::before {
+    width: 50%;
 }
 
 .header_section a:hover {
-    font-size: 18px;
-    text-decoration: underline;
+    text-shadow: 1px 1px 1px #000;
 }
 
 .header_section ul {
@@ -80,16 +142,6 @@ img:hover {
     /* letter-spacing: 1.5px; */
 }
 
-/* 
-.header_section ul span {
-    width: 75px;
-    height: 3px;
-    margin-left: 20px;
-    margin-top: -5px;
-    display: none;
-    display: block;
-    background-color: blue;
-} */
 
 /*********************************************** Home Section  *************************/
 
@@ -196,6 +248,10 @@ img:hover {
     border: 1px solid rgba(34, 215, 58, 0.316);
     transition: 1s;
     position: relative;
+}
+
+.content_MT {
+    margin-top: 100px;
 }
 
 .mydiv h2 {
@@ -396,6 +452,10 @@ img:hover {
 
 /************************************************************************************************/
 
+.content_II {
+    margin-top: 200px;
+}
+
 .content_left_section, .content_right_section {
     width: 48%;
     height: 350px;
@@ -530,6 +590,9 @@ img:hover {
     /* border: 1px solid black; */
 }
 
+.content_price {
+    margin-top: 50px;
+}
 
 .content_sec6 .parent {
     width: 330px;
@@ -632,6 +695,7 @@ img:hover {
     background-size: cover; */
     border: 1px solid black;
     color: #fff;
+    margin-top: 100px;
 }
 
 .container_sec7 .overlay {
@@ -692,16 +756,16 @@ img:hover {
     /* border: 1px solid rgb(87, 53, 53); */
 }
 
-/****************************************************** section 88 Our team    *****************************************************/
+/****************************************************** section 8 Our team    *****************************************************/
 
-.container_sec88 .content {
+.container_sec8 .content {
     width: 100%;
     height: 500px;
-    margin-top: 100px;
+    margin-top: 120px;
     /* border: 1px solid red; */
 }
 
-.container_sec88 .content .parent_div {
+.container_sec8 .content .parent_div {
     width: 25%;
     height: 330px;
     text-align: center;
@@ -712,17 +776,17 @@ img:hover {
     /* border: 1px solid red; */
 }
 
-.container_sec88 .content .parent_div img {
+.container_sec8 .content .parent_div img {
     margin: 5%;
 }
 
-.container_sec88 .content .parent_div p {
+.container_sec8 .content .parent_div p {
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 
-.container_sec88 .content .parent_div span {
+.container_sec8 .content .parent_div span {
     text-transform: uppercase;
     font-size: smaller;
     /* color: rgba(5, 135, 101, 0.668); */
@@ -730,7 +794,7 @@ img:hover {
     margin-bottom: 10px;
 }
 
-.container_sec88 .content .parent_div .overlay88 {
+.container_sec8 .content .parent_div .overlay_sec8 {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -741,14 +805,14 @@ img:hover {
     z-index: 15;
 }
 
-.container_sec88 .content .parent_div .overlay88 ul {
+.container_sec8 .content .parent_div .overlay_sec8 ul {
     list-style: none;
     margin-top: 5%;
     margin-right: 5%;
     float: right;
 }
 
-.container_sec88 .content .parent_div .overlay88 ul li {
+.container_sec8 .content .parent_div .overlay_sec8 ul li {
     width: 45px;
     height: 50px;
     text-align: center;
@@ -756,13 +820,13 @@ img:hover {
     padding-top: 15px;
 }
 
-.container_sec88 .content .parent_div .overlay88 ul li a {
+.container_sec8 .content .parent_div .overlay_sec8 ul li a {
     color: rgb(0, 245, 4);
     font-size: larger;
     text-shadow: 1px 1px 1px black;
 }
 
-.container_sec88 .content .parent_div .overlay88:hover {
+.container_sec8 .content .parent_div .overlay_sec8:hover {
     opacity: 1;
 }
 
@@ -793,13 +857,14 @@ img:hover {
     color: rgb(54, 54, 129);
 }
 
-/****************************************************** section 8 News    *****************************************************/
+/****************************************************** section 9 News    *****************************************************/
 
-.container_sec8 {
+.container_sec9 {
     width: 80%;
     height: 800px;
     margin: auto;
     margin-top: 120px;
+    margin-bottom: 50px;
     /* border: 1px solid red; */
 }
 
@@ -810,7 +875,6 @@ img:hover {
     font-size: 30px;
     font-weight: 600;
     letter-spacing: 2px;
-
 }
 
 .line_under_title {
@@ -862,27 +926,25 @@ img:hover {
     color: rgba(10, 235, 81, 0.55);
 }
 
-.container_sec8 .news_container h3 {
+.container_sec9 .news_container h3 {
     margin-top: 10px;
     text-decoration: underline;
 }
 
-.container_sec8 .news_container p {
+.container_sec9 .news_container p {
     margin-top: 10px;
     line-height: 1.5;
     color: rgba(0, 0, 0, 0.7);
 }
 
-
-.container_sec8 .news_container p a {
+.container_sec9 .news_container p a {
     color: rgba(6, 37, 238, 0.799);
 }
 
-.container_sec8 .news_container .link_read {
+.container_sec9 .news_container .link_read {
     padding-top: 20px;
     font-weight: 600;
 }
-
 
 .news_container::after {
     content: "";
@@ -949,7 +1011,7 @@ footer .content li a {
 }
 
 footer .content li:hover {
-    background-color: rgb(9, 119, 90);
+    background-color: rgb(5, 245, 173);
 }
 
 footer .content p {
@@ -960,4 +1022,4 @@ footer .content p {
 
 }
 
- /*************************************** Finally of The website  ****************************************/
+/*************************************** Finally of The website  ****************************************/

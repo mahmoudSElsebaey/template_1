@@ -1,972 +1,588 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'varela round', sans-serif;
-    color: rgb(9, 119, 90);
-}
-
-
-button, a {
-    cursor: pointer;
-    font-family: sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    text-decoration: none;
-    color: #000;
-}
-
-/*Colors
-
-text  ==> rgb(9, 119, 90);
-icons ==> rgba(10, 235, 81, 0.55);
-div bg when hover ==> rgba(2, 248, 35, 0.174);  &  border: 2px solid rgb(9, 119, 90);
-button text ==> rgb(30, 255, 0); &   bg ==> rgba(9, 119, 90, 0.673);
-line under text title bg <span> ==> rgba(13, 186, 19, 0.587);
-
-*/
-
-/* img {
-    opacity: .8;
-} 
-
-img:hover {
-    opacity: 1;
-}*/
-
-/* ***************************************  header section ****************************************** */
-.header_section {
-    width: 100%;
-    height: 50px;
-    position: fixed;
-    z-index: 100;
-    background-color: #fff;
-    opacity: .9;
-    box-shadow: 5px 5px 5px rgba(3, 109, 38, 0.349);
-}
-
-.header_section .logo_img {
-    width: 30%;
-    float: left;
-}
-
-.header_section .logo_img img {
-    margin-left: 130px;
-}
-
-.header_section a {
-    color: rgb(9, 119, 90);
-    /* text-shadow: 1px 1px 1px black; */
-    /* transition: 3s ease-in-out; */
-}
-
-.header_section a:hover {
-    font-size: 18px;
-    text-decoration: underline;
-}
-
-.header_section ul {
-    list-style: none;
-    float: right;
-    margin-right: 50px;
-}
-
-.header_section li {
-    display: inline-block;
-    margin: 15px;
-    /* letter-spacing: 1.5px; */
-}
-
-/* 
-.header_section ul span {
-    width: 75px;
-    height: 3px;
-    margin-left: 20px;
-    margin-top: -5px;
-    display: none;
-    display: block;
-    background-color: blue;
-} */
-
-/*********************************************** Home Section  *************************/
-
-.home {
-    height: 100vh;
-    background-image: url(../images/ddd.jpg);
-    background-position: cover;
-    position: relative;
-}
-
-.home_content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 800px;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    line-height: 1.8;
-}
-
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.home_content .home_title {
-    color: rgb(9, 119, 90);
-    font-size: 55px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.home_content p {
-    color: rgba(9, 119, 90, 0.7);
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.home_content .btn {
-    width: 150px;
-    padding: 15px 0px;
-    margin-right: 10px;
-    font-size: larger;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    /*شكل الموس */
-    transition: .3s;
-
-}
-
-.home_content .btn_learn {
-    background-color: rgb(9, 119, 90);
-    color: #fff;
-    transition: .3s;
-}
-
-.home_content .btn:hover {
-    opacity: .4;
-    background-color: rgba(9, 119, 90, 0.673);
-    color: rgb(30, 255, 0);
-}
-
-/* ******************************************** container ************************************* */
-.container {
-    width: 85%;
-    height: 600px;
-    margin: auto;
-    margin-top: 100px;
-    /* border: 1px solid black; */
-}
-
-.container h3, .container_featuers_works h3 {
-    text-align: center;
-    font-size: 35px;
-    font-weight: 600;
-    text-transform: capitalize;
-    color: rgb(9, 119, 90);
-}
-
-.line_under_title {
-    width: 70px;
-    height: 5px;
-    background-color: rgba(13, 186, 19, 0.587);
-    display: block;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 50px;
-}
-
-.mydiv, .mydiv_offr {
-    width: 330px;
-    height: 240px;
-    margin-top: 20px;
-    text-align: center;
-    padding: 20px;
-    line-height: 1.5;
-    float: left;
-    margin-left: 50px;
-    border: 1px solid rgba(34, 215, 58, 0.316);
-    transition: 1s;
-    position: relative;
-}
-
-.content_MT{
-    margin-top: 100px;
-}
-
-.mydiv h2 {
-    color: rgba(10, 235, 81, 0.55);
-    font-size: 30px;
-    padding: 10px;
-}
-
-.mydiv h4 {
-    font-size: 25px;
-    font-weight: 600;
-}
-
-.mydiv p {
-    letter-spacing: 2px;
-    color: rgba(9, 119, 90, 0.5);
-}
-
-.mydiv a {
-    color: rgba(17, 4, 255, 0.637);
-}
-
-.mydiv::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    background-color: rgba(34, 215, 58, 0.316);
-    /* border: 1px solid rgb(9, 119, 90); */
-    opacity: .9;
-    transition: 1s;
-}
-
-.mydiv:hover::after {
-    width: 100%;
-    height: 100%;
-}
-
-.mydiv:hover>h4 {
-    color: rgb(9, 249, 185);
-}
-
-/* .mydiv:hover > p{
-    color:rgba(9, 249, 185, 0.539);
-} */
-
-
-
-/* ***************************************************************** */
-
-.container_featuers_works {
-    width: 100%;
-    height: 1400px;
-    background-color: rgba(93, 166, 20, 0.246);
-}
-
-.container_featuers_works h3 {
-    padding-top: 100px;
-}
-
-.container_featuers_works .content_images {
-    width: 80%;
-    margin: auto;
-    margin-top: 100px;
-    /* border: 1px solid black; */
-}
-
-.container_featuers_works .content_images .myimg {
-    float: left;
-    width: 24%;
-    height: 330px;
-    position: relative;
-    margin: 30px 30px 0px 60px;
-}
-
-.container_featuers_works .overlay {
-    width: 105%;
-    height: 95%;
-    margin-top: -2%;
-    margin-left: -2%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    opacity: 0;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0.904);
-    transition: .5s;
-    /* visibility: hidden; */
-    /* display: none;  */
-}
-
-.container_featuers_works .overlay .overlay_content {
-    position: absolute;
-    width: 90%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    line-height: 2;
-    /* border: 1px solid rgba(240, 0, 0, 0.938); */
-}
-
-.container_featuers_works .overlay .overlay_content p {
-    color: rgb(77, 77, 238);
-}
-
-.container_featuers_works .overlay .overlay_content h2 {
-    color: #fff;
-    font-size: 20px;
-}
-
-.container_featuers_works .overlay .overlay_content i {
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    font-size: larger;
-    color: rgb(13, 13, 245);
-    padding: 10px;
-    background-color: rgb(46, 95, 174);
-}
-
-.container_featuers_works .overlay:hover {
-    opacity: .8;
-    visibility: visible;
-}
-
-/* ******************************************************************* */
-
-.mydiv_offr {
-    height: 200px;
-    transition: .5s;
-}
-
-.mydiv_offr i {
-    color: rgba(10, 235, 81, 0.55);
-    font-size: 35px;
-    padding-top: 5px;
-    margin-right: 16px;
-}
-
-.mydiv_offr .inside_mydiv {
-    width: 80%;
-    height: 100%;
-    float: right;
-    text-align: left;
-    text-transform: capitalize;
-    /* border: 1px solid red; */
-}
-
-.mydiv_offr .inside_mydiv h4 {
-    font-size: 25px;
-    font-weight: 600;
-}
-
-.mydiv_offr .inside_mydiv p {
-    color: rgba(9, 119, 90, 0.5);
-    margin-top: 10px;
-    letter-spacing: 1.5px;
-
-}
-
-.mydiv_offr::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 0;
-    height: 100%;
-    background-color: rgba(34, 215, 58, 0.316);
-    opacity: .9;
-    transition: 1s;
-}
-
-.mydiv_offr:hover::after {
-    width: 50%;
-    height: 100%;
-}
-
-.mydiv_offr::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 50%;
-    width: 0;
-    height: 100%;
-    background-color: rgba(34, 215, 58, 0.316);
-    opacity: .9;
-    transition: 1s;
-}
-
-.mydiv_offr:hover::before {
-    width: 50%;
-    height: 100%;
-}
-
-/************************************************************************************************/
-
-.content_II{
-    margin-top: 200px;
-}
-
-.content_left_section, .content_right_section {
-    width: 48%;
-    height: 350px;
-    line-height: 2;
-    float: left;
-    margin-left: 20px;
-    /* border: 1px solid red; */
-}
-
-.content_left_section h3 {
-    text-align: left;
-}
-
-.content_left_section .line_under_title {
-    margin-left: 0;
-    margin-top: -5px;
-    margin-bottom: 50px;
-}
-
-.content_left_section p {
-    line-height: 1.5;
-    margin-bottom: 20px;
-    color: rgba(9, 119, 90, 0.5);
-}
-
-.content_left_section i {
-    color: rgba(10, 235, 81, 0.7);
-    font-size: 20px;
-    padding-right: 10px;
-}
-
-.content_left_section span {
-    color: rgba(9, 119, 90, 0.5);
-}
-
-.content_right_section .image_right {
-    width: 65%;
-    height: 100%;
-    margin-left: 50px;
-    position: relative;
-    /* border: 1px solid red; */
-}
-
-.content_right_section .image_right::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    opacity: .5;
-    transition: 1s;
-    background-color: rgba(34, 215, 58, 0.316);
-}
-
-.content_right_section .image_right:hover::after {
-    width: 50%;
-    height: 100%;
-}
-
-.content_right_section .image_right::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 0;
-    opacity: .8;
-    transition: 1s;
-    background-color: rgba(34, 215, 58, 0.316);
-}
-
-.content_right_section .image_right:hover::before {
-    width: 50%;
-    height: 100%;
-}
-
-/*************************************************** section 5 ***************************************************/
-.container_sec5 {
-    width: 100%;
-    height: 400px;
-    background-image: url("../images/ddd.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 100%, 100%;
-}
-
-.container_sec5 .overlay {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.container_sec5 .content_sec5 {
-    width: 80%;
-    height: 100%;
-    margin: auto;
-    /* border: 1px solid red; */
-}
-
-.container_sec5 .content_sec5 .image_icon {
-    width: 200px;
-    height: 150px;
-    padding: 20px;
-    text-align: center;
-    font-size: 30px;
-    font-weight: 600;
-    float: left;
-    margin-left: 50px;
-    margin-top: 120px;
-    /* border: 1px solid red; */
-}
-
-.container_sec5 .content_sec5 .image_icon i {
-    color: rgba(10, 235, 81, 0.55);
-    margin-bottom: 20px;
-}
-
-.container_sec5 .content_sec5 .image_icon .info {
-    font-size: 18px;
-    color: rgba(9, 119, 90, 0.8);
-}
-
-/*************************************  section 6    *************************************/
-
-.content_sec6 {
-    height: 550px;
-    margin-top: 100px;
-    /* border: 1px solid black; */
-}
-
-.content_price{
-    margin-top: 50px;
-}
-.content_sec6 .parent {
-    width: 330px;
-    height: 380px;
-    border: 1px solid rgba(34, 215, 58, 0.316);
-    text-align: center;
-    font-size: 30px;
-    line-height: 1.5;
-    padding: 10px;
-    margin-left: 50px;
-    margin-top: 50px;
-    color: rgba(0, 0, 0, 0.54);
-    transition: .5s;
-    float: left;
-    position: relative;
-}
-
-.parent_title {
-    text-transform: uppercase;
-    font-size: smaller;
-    padding: 20px;
-}
-
-.content_sec6 .circle_price {
-    width: 110px;
-    height: 110px;
-    border: 2px solid rgba(10, 235, 81, 0.55);
-    border-radius: 50%;
-    line-height: 0;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 20px;
-    color: rgba(9, 119, 90);
-    transition: .5s;
-}
-
-/* 
-.content_sec6 .circle_price:hover, .parent_title:hover {
-    color: brown;
-} */
-
-.content_sec6 .price {
-    padding-top: 40px;
-    font-size: 50px;
-}
-
-.content_sec6 .month {
-    font-size: 18px;
-    padding-top: 40px;
-}
-
-.parent p {
-    font-size: 18px;
-}
-
-.content_sec6 .btn {
-    width: 150px;
-    padding: 5px;
-    color: rgba(9, 119, 90);
-    margin-top: 20px;
-    border: 2px solid rgba(10, 235, 81, 0.55);
-    background: #fff;
-    transition: .5s;
-}
-
-
-.parent::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: rgba(34, 215, 58, 0.316);
-    opacity: .9;
-    transition: 1s;
-}
-
-.parent:hover::after {
-    width: 100%;
-    height: 100%;
-}
-
-.parent:hover>.circle_price, .parent:hover>.parent_title {
-    color: rgb(231, 0, 0);
-}
-
-.content_sec6 .btn:hover {
-    background-color: rgba(6, 138, 103, 0.439);
-}
-
-/***********************************************  section 7  **********************************************/
-
-.container_sec7 {
-    width: 100%;
-    height: 400px;
-    background: url(../images/playground.jpg);
-    background-attachment: fixed;
-    /* background-repeat: no-repeat;
-    background-size: cover; */
-    border: 1px solid black;
-    color: #fff;
-    margin-top: 100px;
-}
-
-.container_sec7 .overlay {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.container_sec7 .content {
-    width: 80%;
-    height: 70%;
-    margin: auto;
-    /* border: 1px solid red; */
-}
-
-.container_sec7 .content_parent_left {
-    width: 40%;
-    height: 90%;
-    margin-top: 50px;
-    margin-left: 80px;
-    float: left;
-    /* border: 1px solid red; */
-}
-
-.container_sec7 .content_parent_left .cotent_up {
-    margin: 50px 20px 20px 20px;
-}
-
-.container_sec7 .content_parent_left .cotent_up .image_sec7 {
-    width: 30%;
-    /* border: 1px solid red; */
-    float: left;
-}
-
-.container_sec7 .cotent_up img {
-    border-radius: 50%;
-}
-
-.image_info {
-    display: inline-block;
-    margin-top: 30px;
-    width: 70%;
-    /* border: 1px solid red; */
-}
-
-.image_info h4 {
-    color: rgb(127, 127, 231);
-}
-
-.content_down {
-    width: 95%;
-    height: 100px;
-    margin: auto;
-    text-transform: capitalize;
-    /* border: 1px solid rgb(87, 53, 53); */
-}
-
-/****************************************************** section 8 Our team    *****************************************************/
-
-.container_sec8 .content {
-    width: 100%;
-    height: 500px;
-    margin-top: 120px;
-    /* border: 1px solid red; */
-}
-
-.container_sec8 .content .parent_div {
-    width: 25%;
-    height: 330px;
-    text-align: center;
-    position: relative;
-    background-color: rgba(6, 138, 103, 0.439);
-    float: left;
-    margin-left: 70px;
-    /* border: 1px solid red; */
-}
-
-.container_sec8 .content .parent_div img {
-    margin: 5%;
-}
-
-.container_sec8 .content .parent_div p {
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-
-.container_sec8 .content .parent_div span {
-    text-transform: uppercase;
-    font-size: smaller;
-    /* color: rgba(5, 135, 101, 0.668); */
-    font-weight: 200;
-    margin-bottom: 10px;
-}
-
-.container_sec8 .content .parent_div .overlay_sec8 {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: .5s;
-    z-index: 15;
-}
-
-.container_sec8 .content .parent_div .overlay_sec8 ul {
-    list-style: none;
-    margin-top: 5%;
-    margin-right: 5%;
-    float: right;
-}
-
-.container_sec8 .content .parent_div .overlay_sec8 ul li {
-    width: 45px;
-    height: 50px;
-    text-align: center;
-    background-color: rgb(22, 140, 136);
-    padding-top: 15px;
-}
-
-.container_sec8 .content .parent_div .overlay_sec8 ul li a {
-    color: rgb(0, 245, 4);
-    font-size: larger;
-    text-shadow: 1px 1px 1px black;
-}
-
-.container_sec8 .content .parent_div .overlay_sec8:hover {
-    opacity: 1;
-}
-
-.parent_div::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    transition: .5s;
-    opacity: .5;
-    z-index: 14;
-    background-color: rgba(34, 215, 58, 0.316);
-}
-
-.parent_div:hover::after {
-    width: 100%;
-    height: 100%;
-}
-
-.parent_div:hover>p {
-    color: rgb(18, 233, 21);
-    text-shadow: 1px 1px 1px black;
-}
-
-.parent_div:hover>span {
-    color: rgb(54, 54, 129);
-}
-
-/****************************************************** section 9 News    *****************************************************/
-
-.container_sec9 {
-    width: 80%;
-    height: 800px;
-    margin: auto;
-    margin-top: 120px;
-    margin-bottom: 50px;
-    /* border: 1px solid red; */
-}
-
-.title_recent_news {
-    display: block;
-    text-align: center;
-    text-transform: capitalize;
-    font-size: 30px;
-    font-weight: 600;
-    letter-spacing: 2px;
-}
-
-.line_under_title {
-    width: 90px;
-    height: 5px;
-    background-color: rgba(13, 186, 19, 0.587);
-    display: block;
-    margin: auto;
-    margin-top: 20px;
-}
-
-.news_container {
-    width: 300px;
-    height: 580px;
-    margin-top: 100px;
-    margin-left: 50px;
-    float: left;
-    box-shadow: 3px 3px 3px rgba(34, 215, 58, 0.316);
-    transition: 1s;
-    position: relative;
-    /* border: 1px solid black; */
-}
-
-.news_container .image1 {
-    width: 100%;
-    height: 250px;
-    /* border: 1px solid green; */
-}
-
-.news_container .image1 img {
-    width: 85%;
-    height: 100%;
-    margin-left: 10px;
-}
-
-.img_info {
-    width: 90%;
-    height: 30px;
-    margin: auto;
-    margin-top: 15px;
-    padding-top: 5px;
-    font-size: smaller;
-    /* border: 1px solid green; */
-}
-
-.img_info i {
-    margin-left: 10px;
-    margin-right: 5px;
-    color: rgba(10, 235, 81, 0.55);
-}
-
-.container_sec9 .news_container h3 {
-    margin-top: 10px;
-    text-decoration: underline;
-}
-
-.container_sec9 .news_container p {
-    margin-top: 10px;
-    line-height: 1.5;
-    color: rgba(0, 0, 0, 0.7);
-}
-
-.container_sec9 .news_container p a {
-    color: rgba(6, 37, 238, 0.799);
-}
-
-.container_sec9 .news_container .link_read {
-    padding-top: 20px;
-    font-weight: 600;
-}
-
-.news_container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: rgba(34, 215, 58, 0.316);
-    opacity: .9;
-    transition: 1s;
-}
-
-.news_container:hover::after {
-    width: 100%;
-    height: 100%;
-}
-
-/***************************************** Footer section *********************************************/
-
-
-footer {
-    width: 100%;
-    height: 300px;
-    background-color: rgba(2, 248, 35, 0.174);
-    box-shadow: -10px 0px 8px rgb(131, 216, 131);
-}
-
-footer .content {
-    width: 40%;
-    height: 80%;
-    margin: auto;
-    border: 1px solid rgba(2, 248, 35, 0);
-}
-
-footer .content .footer_img {
-    width: 200px;
-    height: 90px;
-    margin: auto;
-    margin-top: 50px;
-}
-
-footer .content ul {
-    list-style: none;
-    text-align: center;
-    margin-top: 20px;
-    /* border: 1px solid red; */
-}
-
-footer .content li {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgb(53, 138, 208);
-    text-align: center;
-    display: inline-block;
-    line-height: 1.9;
-    transition: .5s;
-}
-
-footer .content li a {
-    color: #fff;
-    font-size: 25px;
-}
-
-footer .content li:hover {
-    background-color: rgb(5, 245, 173);
-}
-
-footer .content p {
-    text-align: center;
-    padding-top: 10px;
-    text-transform: uppercase;
-    color: rgba(6, 111, 83, 0.642);
-
-}
-
- /*************************************** Finally of The website  ****************************************/
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template 1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <!-------------------------------- header section -------------------------------->
+    <header class="header_section">
+        <div class="logo_img">
+            <img src="images/logo2.jpg" width="100px" height="50px" alt="Logo">
+        </div>
+
+        <ul>
+            <li><a href="#" class="home_link">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Protfolio</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Prices</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+    </header>
+
+    <div class="home">
+        <div class="overlay">
+            <div class="home_content">
+                <h2 class="home_title">we are creative agency</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button class="btn btn_start">Get started!</button>
+                <button class="btn btn_learn">Learn More</button>
+            </div> <!-- /home_content  -->
+        </div> <!-- /overlay  -->
+    </div><!-- /home section -->
+
+    <!-- ----------------------------------------- Container  sec3---------------------------------- -->
+    <div class="container">
+        <h3>Welcome To Website</h3>
+        <span class="line_under_title"></span>
+
+        <div class="content_MT">
+            <!-- Setting icon -->
+            <div class="mydiv">
+                <h2><i class="fas fa-cogs"></i></h2>
+                <h4>Fully Customizible</h4>
+                <p>this is content of the paragraph 1 in first div</p><br>
+                <a href="#">Read More..</a>
+            </div>
+
+            <!-- Magic icon -->
+            <div class="mydiv">
+                <h2><i class="fas fa-magic"></i></h2>
+                <h4>Fully Customizible</h4>
+                <p>this is content of the paragraph 1 in first div</p><br>
+                <a href="#">Read More..</a>
+            </div>
+
+            <!-- mobile icon -->
+            <div class="mydiv">
+                <h2><i class="fas fa-mobile-alt"></i></h2>
+                <h4>Fully Customizible</h4>
+                <p>this is content of the paragraph 1 in first div</p><br>
+                <a href="#">Read More..</a>
+            </div>
+        </div>
+    </div> <!-- / container -->
+
+    <!------------------------------ featuers_works ------------------------------->
+    <div class="container_featuers_works">
+        <h3> Featured Works </h3>
+        <span class="line_under_title"></span>
+        <div class="content_images">
+
+            <div class="myimg">
+                <img src="images/msalah.jpg" width="100%" height="300px" alt="Mohamed salah" title="Mohamed salah">
+                <div class="overlay">
+                    <div class="overlay_content">
+                        <p>web designer</p>
+                        <h2>Mahmoud S. Elsebaey</h2>
+                        <i class="fas fa-edit"></i>
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div><!-- /overlay -->
+            </div>
+
+            <div class="myimg">
+                <img src="images/ronaldo.jpg" width="100%" height="300px" alt="ronaldo" title="Ronaldo">
+                <div class="overlay">
+                    <div class="overlay_content">
+                        <p>web designer</p>
+                        <h2>Mahmoud S. Elsebaey</h2>
+                        <i class="fas fa-edit"></i>
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div><!-- /overlay -->
+            </div>
+
+            <div class="myimg">
+                <img src="images/messi.jpg" width="100%" height="300px" alt="messi" title="Messi">
+                <div class="overlay">
+                    <div class="overlay_content">
+                        <p>web designer</p>
+                        <h2>Mahmoud S. Elsebaey</h2>
+                        <i class="fas fa-edit"></i>
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div><!-- /overlay -->
+            </div>
+
+            <div class="myimg">
+                <img src="images/haaland.jpg" width="100%" height="300px" alt="haaland" title="Haaland">
+                <div class="overlay">
+                    <div class="overlay_content">
+                        <p>web designer</p>
+                        <h2>Mahmoud S. Elsebaey</h2>
+                        <i class="fas fa-edit"></i>
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div><!-- /overlay -->
+            </div>
+
+            <div class="myimg">
+                <img src="images/mane.jpg" width="100%" height="300px" alt="mane" title="Sadio Mane">
+                <div class="overlay">
+                    <div class="overlay_content">
+                        <p>web designer</p>
+                        <h2>Mahmoud S. Elsebaey</h2>
+                        <i class="fas fa-edit"></i>
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div><!-- /overlay -->
+            </div>
+
+            <div class="myimg">
+                <img src="images/Kevin.jpg" width="100%" height="300px" alt="Kevin" title="Kevin de proune">
+                <div class="overlay">
+                    <div class="overlay_content">
+                        <p>web designer</p>
+                        <h2>Mahmoud S. Elsebaey</h2>
+                        <i class="fas fa-edit"></i>
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div><!-- /overlay -->
+            </div>
+
+            <div class="myimg">
+                <img src="images/cante.jpg" width="100%" height="300px" alt="cante" title="cante">
+                <div class="overlay">
+                    <div class="overlay_content">
+                        <p>web designer</p>
+                        <h2>Mahmoud S. Elsebaey</h2>
+                        <i class="fas fa-edit"></i>
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div><!-- /overlay -->
+            </div>
+
+            <div class="myimg">
+                <img src="images/livaa.jpg" width="100%" height="300px" alt="livaaaa">
+                <div class="overlay">
+                    <div class="overlay_content">
+                        <p>web designer</p>
+                        <h2>Mahmoud S. Elsebaey</h2>
+                        <i class="fas fa-edit"></i>
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div><!-- /overlay -->
+            </div>
+
+            <div class="myimg">
+                <img src="images/benzema.jpeg" width="100%" height="300px" alt="benzema" title="Kareem benzema">
+                <div class="overlay">
+                    <div class="overlay_content">
+                        <p>web designer</p>
+                        <h2>Mahmoud S. Elsebaey</h2>
+                        <i class="fas fa-edit"></i>
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div><!-- /overlay -->
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <!------------------------------------------ Container sec5 -------------------------------------->
+
+    <div class="container">
+        <h3>what we offer</h3>
+        <span class="line_under_title"></span>
+
+        <div class="content_MT">
+            <!-- gem icon -->
+            <div class="mydiv_offr">
+                <i class="fas fa-gem"></i>
+                <div class="inside_mydiv">
+                    <h4>app development</h4>
+                    <p>
+                        my name is Elsebaey i live in mansoura this is my own project.
+                    </p>
+                </div>
+            </div>
+
+            <!-- rocket icon -->
+            <div class="mydiv_offr">
+                <i class="fas fa-rocket"></i>
+                <div class="inside_mydiv">
+                    <h4>graphic design</h4>
+                    <p>
+                        my name is Elsebaey i live in mansoura this is my own project.
+                    </p>
+                </div>
+            </div>
+
+            <!-- cogs icon -->
+            <div class="mydiv_offr">
+                <i class="fas fa-cogs" style="font-size: 30px;"></i>
+                <div class="inside_mydiv">
+                    <h4>creative idea</h4>
+                    <p>
+                        my name is Elsebaey i live in mansoura this is my own project.
+                    </p>
+                </div>
+            </div>
+
+            <!-- shopping icon -->
+            <div class="mydiv_offr">
+                <i class="fas fa-shopping-cart"></i>
+                <div class="inside_mydiv">
+                    <h4>marketting</h4>
+                    <p>
+                        my name is Elsebaey i live in mansoura this is my own project.
+                    </p>
+                </div>
+            </div>
+
+            <!-- pecil pen -->
+            <div class="mydiv_offr">
+                <i class="fas fa-pencil-alt"></i>
+                <div class="inside_mydiv">
+                    <h4>awesome support</h4>
+                    <p>
+                        my name is Elsebaey i live in mansoura this is my own project.
+                    </p>
+                </div>
+            </div>
+
+            <!-- design icon -->
+            <div class="mydiv_offr">
+                <i class="fas fa-drafting-compass"></i>
+                <div class="inside_mydiv">
+                    <h4>brand design</h4>
+                    <p>
+                        my name is Elsebaey i live in mansoura this is my own project.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------------- R.Image & L.Information Section  --------------------------------------->
+
+    <div class="container">
+        <div class="content_II">
+            <div class="content_left_section">
+                <h3 class="title">why choose us</h3>
+                <span class="line_under_title "></span>
+
+                <P>i do not know what i have to say but iam so happy with that field of working hoping that it lasts
+                    forevere god willing</P>
+
+                <i class="far fa-check-circle"></i><span>Lorem ipsum dolor sit amet consectquod maxime velit!</span><br>
+                <i class="far fa-check-circle"></i><span>Lorem ipsum dolor sit amet consectquod maxime velit!</span><br>
+                <i class="far fa-check-circle"></i><span>Lorem ipsum dolor sit amet consectquod maxime velit!</span><br>
+                <i class="far fa-check-circle"></i><span>Lorem ipsum dolor sit amet consectquod maxime velit!</span>
+
+            </div>
+            <div class="content_right_section">
+                <div class="image_right">
+                    <img src="images/msalah.jpg" width="100%" height="100%" alt="Mohamed salah" title="Mohamed salah">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------------------------- sec5  --------------------------------------------- -->
+    <div class="container_sec5">
+        <div class="overlay">
+            <div class="content_sec5">
+
+                <div class="image_icon">
+                    <i class="fas fa-users"></i>
+                    <p class="num">596K</p>
+                    <p class="info">happy clients</p>
+                </div>
+
+                <div class="image_icon">
+                    <i class="fas fa-trophy"></i>
+                    <p class="num">26</p>
+                    <p class="info">awards won</p>
+                </div>
+
+                <div class="image_icon">
+                    <i class="fas fa-coffee"></i>
+                    <p class="num">138K</p>
+                    <p class="info">cups of coffee</p>
+                </div>
+
+                <div class="image_icon">
+                    <i class="fas fa-file"></i>
+                    <p class="num">596K</p>
+                    <p class="info">happy clients</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------------------  sec6  ------------------------------------------------>
+
+    <div class="container">
+
+        <div class="content_sec6">
+            <h3>pricing table</h3>
+            <span class="line_under_title"></span>
+
+            <div class="content_price">
+                <!-- parent 1 -->
+                <div class="parent">
+                    <p class="parent_title">basic plan</p>
+
+                    <div class="circle_price">
+                        <h2 class="price">$9</h2>
+                        <h4 class="month">/ MONTH</h4>
+                    </div>
+
+                    <p>1db disk space</p>
+                    <p>100 email account</p>
+                    <p>24/24 support</p>
+
+                    <button class="btn">purchase now</button>
+                </div>
+
+                <!-- parent 2 -->
+                <div class="parent">
+                    <p class="parent_title">basic plan</p>
+
+                    <div class="circle_price">
+                        <h2 class="price">$35</h2>
+                        <h4 class="month">/ MONTH</h4>
+                    </div>
+
+                    <p>1db disk space</p>
+                    <p>100 email account</p>
+                    <p>24/24 support</p>
+
+                    <button class="btn">purchase now</button>
+                </div>
+
+                <!-- parent 3 -->
+                <div class="parent">
+                    <p class="parent_title">basic plan</p>
+
+                    <div class="circle_price">
+                        <h2 class="price">$17</h2>
+                        <h4 class="month">/ MONTH</h4>
+                    </div>
+
+                    <p>1db disk space</p>
+                    <p>100 email account</p>
+                    <p>24/24 support</p>
+
+                    <button class="btn">purchase now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------------------------- sec7  --------------------------------------------- -->
+
+    <div class="container_sec7">
+        <div class="overlay">
+            <div class="content">
+
+                <!-- Left section -->
+                <div class="content_parent_left">
+                    <div class="cotent_up">
+                        <div class="image_sec7">
+                            <img src="images/nymar.jpg" width="100px" height="100px" alt="Nymar" title="Nymar">
+                        </div>
+                        <div class="image_info">
+                            <h2>Mahmoud S. Elsebaey</h2>
+                            <h4>web designer</h4>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="content_down">
+                        <p>this is a paragraph in a section in this template i have to do it to be so good in html, css
+                            languages</p>
+                    </div>
+                </div>
+
+                <!-- Right section -->
+                <div class="content_parent_left">
+                    <div class="cotent_up">
+                        <div class="image_sec7">
+                            <img src="images/klyan.jpg" width="100px" height="100px" alt="klyan" title="klyan">
+                        </div>
+                        <div class="image_info">
+                            <h2>Mahmoud S. Elsebaey</h2>
+                            <h4>web designer</h4>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="content_down">
+                        <p>this is a paragraph in a section in this template i have to do it to be so good in html, css
+                            languages</p>
+                    </div>
+                </div>
+
+            </div><!-- /content -->
+        </div><!-- /overlay -->
+    </div><!-- /container_sec7 -->
+    <br>
+    <!-- -------------------------------------------our team section  ---------------------------------- -->
+    <div class="container container_sec8">
+        <h3 class="title_recent_news">our team</h3>
+        <span class="line_under_title"></span>
+        <div class="content">
+
+            <div class="parent_div">
+                <img src="images/msalah.jpg" width="90%" height="220px" alt="Mohamed salah" title="Mohamed salah">
+                <p>Mo Salah</p>
+                <span>Footballer</span>
+                <div class="overlay_sec8">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div><!-- /parent div -->
+
+            <div class="parent_div">
+                <img src="images/haaland.jpg" width="90%" height="220px" alt="Haaland" title="Haaland">
+                <p>Haaland</p>
+                <span>Footballer</span>
+                <div class="overlay_sec8">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div><!-- /parent div -->
+
+            <div class="parent_div">
+                <img src="images/Kevin.jpg" width="90%" height="220px" alt="Kevin" title="Kevin">
+                <p>Kevin</p>
+                <span>Footballer</span>
+                <div class="overlay_sec8">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div><!-- /parent div -->
+
+
+        </div><!-- /content -->
+    </div>
+
+    <!-- ------------------------------------- sec9 --------------------------------------------- -->
+
+    <div class="container_sec9">
+        <h3 class="title_recent_news">recent news</h3>
+        <span class="line_under_title"></span>
+
+        <!------------------- first news ------------------>
+
+        <div class="news_container">
+            <div class="image1">
+                <img src="images/msalah.jpg" alt="">
+            </div>
+
+            <div class="img_info">
+                <i class="fas fa-user"></i><span>Mohamed salah</span>
+                <i class="far fa-clock"></i><span>11 Dec</span>
+                <i class="fas fa-comments"></i><span>138</span>
+            </div>
+            <br>
+            <h3> This the title of the first news </h3>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur this is adipisicing elit. Praesentium suscipit hgokl foal
+                consequuntur odit rerum
+                eos ut delectus animi obcaecati? Deleniti i eaque minus aspernatur quo fugit repellat
+                ducimus esse!
+            </p>
+            <p class="link_read"> <a href="#">Read more...</a></p>
+
+        </div><!-- /news container  -->
+
+
+        <!---------------- second news ----------------->
+
+        <div class="news_container">
+
+            <div class="image1">
+                <img src="images/messi.jpg" alt="">
+            </div>
+
+            <div class="img_info">
+                <i class="fas fa-user"></i><span>Lionel Messi</span>
+                <i class="far fa-clock"></i><span>30 Mar</span>
+                <i class="fas fa-comments"></i><span>98</span>
+            </div>
+            <br>
+            <h3> This the title of the first news </h3>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur this is adipisicing elit. Praesentium suscipit hgokl foal
+                consequuntur odit rerum
+                eos ut delectus animi obcaecati? Deleniti i eaque minus aspernatur quo fugit repellat
+                ducimus esse!
+            </p>
+            <p class="link_read"> <a href="#">Read more...</a></p>
+        </div>
+
+
+        <!------------------- third news    -------------->
+
+        <div class="news_container">
+
+            <div class="image1">
+                <img src="images/ronaldo.jpg" alt="">
+            </div>
+
+            <div class="img_info">
+                <i class="fas fa-user"></i><span>Cristiano Ronaldo</span>
+                <i class="far fa-clock"></i><span>7 Oct</span>
+                <i class="fas fa-comments"></i><span>279</span>
+            </div>
+            <br>
+            <h3> This the title of the first news </h3>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur this is adipisicing elit. Praesentium suscipit hgokl foal
+                consequuntur odit rerum
+                eos ut delectus animi obcaecati? Deleniti i eaque minus aspernatur quo fugit repellat
+                ducimus esse!
+            </p>
+            <p class="link_read"> <a href="#">Read more...</a></p>
+
+        </div>
+    </div>
+    <!-- ------------------------------------------- Footer section--------------------------------------- -->
+
+    <footer>
+        <div class="content">
+            <div class="footer_img"><img src="images/logo2.jpg" width="100%" height="100%" alt="Logo"></div>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+
+            </ul>
+            <p>copyright &copy; 2021 . all right reserved by colorlib</p>
+        </div>
+    </footer>
+
+
+    <!-- Finally of The website -->
+</body>
+
+</html>
