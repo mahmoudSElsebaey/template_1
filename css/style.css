@@ -29,7 +29,6 @@ line under text title bg <span> ==> rgba(13, 186, 19, 0.587);
 
 */
 
-
 /* img {
     opacity: .8;
 } 
@@ -249,7 +248,7 @@ img:hover {
     border: 1px solid rgba(34, 215, 58, 0.316);
     transition: 1s;
     position: relative;
-  
+
 }
 
 .content_MT {
@@ -810,12 +809,13 @@ img:hover {
     top: 0;
     left: 0;
     opacity: 0;
-    transition: .5s;
+    transition: 1s;
     z-index: 15;
 }
 
 .container_sec8 .content .parent_div .overlay_sec8 ul {
     list-style: none;
+    margin-left: auto;
     margin-top: 5%;
     margin-right: 5%;
     float: right;
@@ -848,8 +848,7 @@ img:hover {
     height: 0;
     transition: .5s;
     opacity: .5;
-    z-index: 14;
-    background-color: rgba(34, 215, 58, 0.316);
+    background-color: rgb(34, 215, 58);
     z-index: -5;
 }
 
@@ -858,12 +857,14 @@ img:hover {
     height: 100%;
 }
 
-.parent_div:hover>p {
+.parent_div:hover p {
     color: rgb(18, 233, 21);
+    transition: .5s;
     text-shadow: 1px 1px 1px black;
 }
 
-.parent_div:hover>span {
+.parent_div:hover span {
+    transition: .5s;
     color: rgb(54, 54, 129);
 }
 
