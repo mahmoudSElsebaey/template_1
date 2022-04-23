@@ -967,7 +967,7 @@ img:hover {
     background-color: rgba(34, 215, 58, 0.316);
     opacity: .9;
     transition: 1s;
-    z-index: -5;
+/*     z-index: -5; */
 }
 
 .news_container:hover::after {
