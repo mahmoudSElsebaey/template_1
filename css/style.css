@@ -61,6 +61,7 @@ img:hover {
     color: rgb(9, 119, 90);
     padding: 0 10px;
     position: relative;
+    transition: .5s;
 }
 
 .header_section .home_link::after {
@@ -101,7 +102,7 @@ img:hover {
     height: 3px;
     background-color: rgb(9, 119, 90);
     box-shadow: 3px 3px 3px rgb(3, 244, 179);
-    transition: .5s;
+    transition: 1s;
 }
 
 .header_section a:hover::after {
@@ -117,7 +118,7 @@ img:hover {
     height: 3px;
     background-color: rgb(9, 119, 90);
     box-shadow: 3px 3px 3px rgb(3, 244, 179);
-    transition: .5s;
+    transition: 1s;
 }
 
 .header_section a:hover::before {
