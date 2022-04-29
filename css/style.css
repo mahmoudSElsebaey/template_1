@@ -516,30 +516,6 @@ img:hover {
     background-color: rgba(34, 215, 58, 0.316);
     /* z-index: -5; */
 }
-
-.content_right_section .image_right:hover::after {
-    width: 50%;
-    height: 100%;
-}
-
-.content_right_section .image_right::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 0;
-    opacity: .8;
-    transition: 1s;
-    background-color: rgba(34, 215, 58, 0.316);
-    /* z-index: -5; */
-}
-
-.content_right_section .image_right:hover::before {
-    width: 50%;
-    height: 100%;
-}
-
 /*************************************************** section 5 ***************************************************/
 .container_sec5 {
     width: 100%;
@@ -919,6 +895,7 @@ img:hover {
     width: 85%;
     height: 100%;
     margin-left: 10px;
+    z-index: -3;
 }
 
 .img_info {
@@ -955,6 +932,7 @@ img:hover {
 .container_sec9 .news_container .link_read {
     padding-top: 20px;
     font-weight: 600;
+    z-index: 10;
 }
 
 .news_container::after {
@@ -967,12 +945,13 @@ img:hover {
     background-color: rgba(34, 215, 58, 0.316);
     opacity: .9;
     transition: 1s;
-    z-index: -5;
+     /* z-index: -5; */
 }
 
 .news_container:hover::after {
     width: 100%;
     height: 100%;
+   
 }
 
 /***************************************** Footer section *********************************************/
