@@ -517,6 +517,10 @@ img:hover {
     /* z-index: -5; */
 }
 
+
+
+
+/*
 .content_right_section .image_right:hover::after {
     width: 50%;
     height: 100%;
@@ -532,14 +536,14 @@ img:hover {
     opacity: .8;
     transition: 1s;
     background-color: rgba(34, 215, 58, 0.316);
-    /* z-index: -5; */
+     z-index: -5;
 }
 
 .content_right_section .image_right:hover::before {
     width: 50%;
     height: 100%;
 }
-
+*/
 /*************************************************** section 5 ***************************************************/
 .container_sec5 {
     width: 100%;
