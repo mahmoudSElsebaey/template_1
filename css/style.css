@@ -6,7 +6,7 @@
 
 body {
     font-family: 'varela round', sans-serif;
-    color: rgb(9, 119, 90);
+    /* color: rgb(9, 119, 90); */
 }
 
 
@@ -43,13 +43,13 @@ img:hover {
     height: 55px;
     position: fixed;
     z-index: 100;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.795);
     opacity: .9;
-    box-shadow: 5px 5px 5px rgba(3, 109, 38, 0.349);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349);
 }
 
 .header_section .logo_img {
-    width: 30%;
+    width: 10%;
     float: left;
 }
 
@@ -58,10 +58,11 @@ img:hover {
 }
 
 .header_section a {
-    color: rgb(9, 119, 90);
+    color: red;
     padding: 0 10px;
     position: relative;
     transition: .5s;
+    font-size: 16px;
 }
 
 .header_section .home_link::after {
@@ -71,7 +72,7 @@ img:hover {
     left: 10px;
     width: 73%;
     height: 3px;
-    background-color: rgb(9, 119, 90);
+    background-color: blue;
     box-shadow: none;
 }
 
@@ -86,7 +87,7 @@ img:hover {
     left: 10px;
     width: 100%;
     height: 3px;
-    background-color: rgb(9, 119, 90);
+    background-color: blue;
     box-shadow: none;
     display: none;
 }
@@ -100,8 +101,8 @@ img:hover {
     left: 10px;
     width: 0;
     height: 3px;
-    background-color: rgb(9, 119, 90);
-    box-shadow: 3px 3px 3px rgb(3, 244, 179);
+    background-color: blue;
+    /* box-shadow: 3px 3px 3px rgb(3, 244, 179); */
     transition: 1s;
 }
 
@@ -116,8 +117,8 @@ img:hover {
     right: 10px;
     width: 0;
     height: 3px;
-    background-color: rgb(9, 119, 90);
-    box-shadow: 3px 3px 3px rgb(3, 244, 179);
+    background-color: blue;
+    /* box-shadow: 3px 3px 3px rgb(3, 244, 179); */
     transition: 1s;
 }
 
@@ -132,12 +133,12 @@ img:hover {
 .header_section ul {
     list-style: none;
     float: right;
-    margin-right: 50px;
+    margin-right: 130px;
 }
 
 .header_section li {
     display: inline-block;
-    margin: 15px;
+    margin: 15px 5px;
     /* letter-spacing: 1.5px; */
 }
 
@@ -171,14 +172,14 @@ img:hover {
 }
 
 .home_content .home_title {
-    color: rgb(9, 119, 90);
+    color: #fff;
     font-size: 55px;
     font-weight: 600;
     text-transform: uppercase;
 }
 
 .home_content p {
-    color: rgba(9, 119, 90, 0.7);
+    color: rgba(255, 255, 255, 0.692);
     letter-spacing: 2px;
     margin-bottom: 10px;
 }
@@ -191,22 +192,25 @@ img:hover {
     border-radius: 5px;
     border: none;
     cursor: pointer;
-    /*شكل الموس */
     transition: .3s;
-
 }
 
 .home_content .btn_learn {
-    background-color: rgb(9, 119, 90);
+    background-color: blue;
     color: #fff;
     transition: .3s;
 }
 
 .home_content .btn:hover {
-    opacity: .4;
-    background-color: rgba(9, 119, 90, 0.673);
-    color: rgb(30, 255, 0);
+    background-color: rgba(0, 0, 255, 0.704);
+    color: #fff;
 }
+
+.home_content .btn_start:hover {
+    background-color: rgba(255, 255, 255, 0.704);
+    color: rgb(0, 0, 0);
+}
+
 
 /* ******************************************** container ************************************* */
 .container {
@@ -222,17 +226,15 @@ img:hover {
     font-size: 35px;
     font-weight: 600;
     text-transform: capitalize;
-    color: rgb(9, 119, 90);
 }
 
 .line_under_title {
     width: 70px;
     height: 5px;
-    background-color: rgba(13, 186, 19, 0.587);
+    background-color: #4169e1;
     display: block;
     margin: auto;
     margin-top: 10px;
-    margin-bottom: 50px;
 }
 
 .mydiv, .mydiv_offr {
@@ -244,35 +246,38 @@ img:hover {
     line-height: 1.5;
     float: left;
     margin-left: 50px;
-    border: 1px solid rgba(34, 215, 58, 0.316);
+    border: 1px solid #888888;
     transition: 1s;
     position: relative;
 
 }
 
 .content_MT {
-    margin-top: 100px;
+    margin-top: 50px;
 
 }
 
 .mydiv h2 {
-    color: rgba(10, 235, 81, 0.55);
+    color: #6195ff;
     font-size: 30px;
+    transition: 1s;
     padding: 10px;
 }
 
 .mydiv h4 {
     font-size: 25px;
     font-weight: 600;
+    padding-bottom: 10px;
+    transition: .5s;
 }
 
 .mydiv p {
     letter-spacing: 2px;
-    color: rgba(9, 119, 90, 0.5);
+    color: #889999;
 }
 
 .mydiv a {
-    color: rgba(17, 4, 255, 0.637);
+    color: #4169e1;
 }
 
 .mydiv::after {
@@ -282,10 +287,8 @@ img:hover {
     left: 0;
     width: 0;
     height: 0;
-    background-color: rgba(34, 215, 58, 0.316);
-    /* border: 1px solid rgb(9, 119, 90); */
-    /* opacity: .9; */
-    transition: 1s;
+    background-color: #333;
+    transition: .5s;
     z-index: -5;
 }
 
@@ -295,17 +298,10 @@ img:hover {
 }
 
 .mydiv:hover>h4 {
-    color: rgb(9, 249, 185);
+    color: #fff;
 }
 
-/* .mydiv:hover > p{
-    color:rgba(9, 249, 185, 0.539);
-} */
-
-
-
-/* ***************************************************************** */
-
+/* ***************************** featuers_works ************************************ */
 .container_featuers_works {
     width: 100%;
     height: 1400px;
@@ -319,7 +315,7 @@ img:hover {
 .container_featuers_works .content_images {
     width: 80%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 50px;
     /* border: 1px solid black; */
 }
 
@@ -383,6 +379,24 @@ img:hover {
     visibility: visible;
 }
 
+.container_featuers_works .overlay:hover p,
+.container_featuers_works .overlay:hover h2,
+.container_featuers_works .overlay:hover i {
+    animation: animate-slider-up 1s 1;
+}
+
+@keyframes animate-slider-up {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 /* ******************************************************************* */
 
 .mydiv_offr {
@@ -391,7 +405,7 @@ img:hover {
 }
 
 .mydiv_offr i {
-    color: rgba(10, 235, 81, 0.55);
+    color: #6671e0;
     font-size: 35px;
     padding-top: 5px;
     margin-right: 16px;
@@ -409,10 +423,11 @@ img:hover {
 .mydiv_offr .inside_mydiv h4 {
     font-size: 25px;
     font-weight: 600;
+    transition: .5s;
 }
 
 .mydiv_offr .inside_mydiv p {
-    color: rgba(9, 119, 90, 0.5);
+    color: #999999;
     margin-top: 10px;
     letter-spacing: 1.5px;
 
@@ -425,9 +440,9 @@ img:hover {
     left: 50%;
     width: 0;
     height: 100%;
-    background-color: rgba(34, 215, 58, 0.316);
+    background-color: #333;
     opacity: .9;
-    transition: 1s;
+    transition: .5s;
     z-index: -5;
 }
 
@@ -443,15 +458,19 @@ img:hover {
     right: 50%;
     width: 0;
     height: 100%;
-    background-color: rgba(34, 215, 58, 0.316);
+    background-color: #333;
     opacity: .9;
-    transition: 1s;
+    transition: .5s;
     z-index: -5;
 }
 
 .mydiv_offr:hover::before {
     width: 50%;
     height: 100%;
+}
+
+.mydiv_offr:hover h4 {
+    color: #fff;
 }
 
 /************************************************************************************************/
@@ -482,17 +501,17 @@ img:hover {
 .content_left_section p {
     line-height: 1.5;
     margin-bottom: 20px;
-    color: rgba(9, 119, 90, 0.5);
+    color: #999999;
 }
 
 .content_left_section i {
-    color: rgba(10, 235, 81, 0.7);
+    color: #6195ff;
     font-size: 20px;
     padding-right: 10px;
 }
 
 .content_left_section span {
-    color: rgba(9, 119, 90, 0.5);
+    color: #999999;
 }
 
 .content_right_section .image_right {
@@ -515,6 +534,7 @@ img:hover {
     background-color: rgba(34, 215, 58, 0.316);
     /* z-index: -5; */
 }
+
 /*************************************************** section 5 ***************************************************/
 .container_sec5 {
     width: 100%;
@@ -554,14 +574,19 @@ img:hover {
     /* border: 1px solid red; */
 }
 
+.container_sec5 .content_sec5 .image_icon .num{
+color: #fff;
+font-weight: 500;
+}
 .container_sec5 .content_sec5 .image_icon i {
-    color: rgba(10, 235, 81, 0.55);
+    color: #6195ff;
     margin-bottom: 20px;
 }
 
 .container_sec5 .content_sec5 .image_icon .info {
     font-size: 18px;
-    color: rgba(9, 119, 90, 0.8);
+    color: #fff;
+    font-weight: normal;
 }
 
 /*************************************  section 6    *************************************/
@@ -579,7 +604,7 @@ img:hover {
 .content_sec6 .parent {
     width: 330px;
     height: 380px;
-    border: 1px solid rgba(34, 215, 58, 0.316);
+    border: 1px solid gray;
     text-align: center;
     font-size: 30px;
     line-height: 1.5;
@@ -601,24 +626,20 @@ img:hover {
 .content_sec6 .circle_price {
     width: 110px;
     height: 110px;
-    border: 2px solid rgba(10, 235, 81, 0.55);
+    border: 2px solid #6195ff;
     border-radius: 50%;
     line-height: 0;
     text-align: center;
     margin: auto;
     margin-bottom: 20px;
-    color: rgba(9, 119, 90);
+    color: black;
     transition: .5s;
 }
 
-/* 
-.content_sec6 .circle_price:hover, .parent_title:hover {
-    color: brown;
-} */
-
 .content_sec6 .price {
     padding-top: 40px;
-    font-size: 50px;
+    font-size: 48px;
+    transition: .5s;
 }
 
 .content_sec6 .month {
@@ -633,9 +654,10 @@ img:hover {
 .content_sec6 .btn {
     width: 150px;
     padding: 5px;
-    color: rgba(9, 119, 90);
+    font-size: 15px;
+    line-height: 15px;
     margin-top: 20px;
-    border: 2px solid rgba(10, 235, 81, 0.55);
+    border: 2px solid #6195ff;
     background: #fff;
     transition: .5s;
 }
@@ -648,10 +670,10 @@ img:hover {
     left: 0;
     width: 100%;
     height: 0;
-    background-color: rgba(34, 215, 58, 0.316);
+    background-color: rgba(51, 51, 51, 0.689);
     opacity: .9;
     transition: 1s;
-    z-index: -5;
+    /* z-index: -5; */
 }
 
 .parent:hover::after {
@@ -660,11 +682,11 @@ img:hover {
 }
 
 .parent:hover>.circle_price, .parent:hover>.parent_title {
-    color: rgb(231, 0, 0);
+    color: rgb(240, 3, 3);
 }
 
 .content_sec6 .btn:hover {
-    background-color: rgba(6, 138, 103, 0.439);
+    background-color: rgba(0, 0, 0, 0.439);
 }
 
 /***********************************************  section 7  **********************************************/
@@ -740,7 +762,6 @@ img:hover {
 }
 
 /****************************************************** section 8 Our team    *****************************************************/
-
 .container_sec8 .content {
     width: 100%;
     height: 500px;
@@ -753,7 +774,7 @@ img:hover {
     height: 330px;
     text-align: center;
     position: relative;
-    background-color: rgba(6, 138, 103, 0.439);
+    background-color: #d1caca9d;
     float: left;
     margin-left: 70px;
     /* border: 1px solid red; */
@@ -766,13 +787,14 @@ img:hover {
 .container_sec8 .content .parent_div p {
     font-weight: 600;
     margin-bottom: 10px;
+    z-index: 1;
 }
 
 
 .container_sec8 .content .parent_div span {
     text-transform: uppercase;
     font-size: smaller;
-    /* color: rgba(5, 135, 101, 0.668); */
+    color: #999;
     font-weight: 200;
     margin-bottom: 10px;
 }
@@ -785,7 +807,7 @@ img:hover {
     left: 0;
     opacity: 0;
     transition: 1s;
-    z-index: 15;
+    z-index: 5;
 }
 
 .container_sec8 .content .parent_div .overlay_sec8 ul {
@@ -800,13 +822,14 @@ img:hover {
     width: 45px;
     height: 50px;
     text-align: center;
-    background-color: rgb(22, 140, 136);
+    background-color: #6195ff;
     padding-top: 15px;
 }
 
 .container_sec8 .content .parent_div .overlay_sec8 ul li a {
-    color: rgb(0, 245, 4);
+    color: #fff;
     font-size: larger;
+    transition: 1s;
     text-shadow: 1px 1px 1px black;
 }
 
@@ -821,10 +844,10 @@ img:hover {
     left: 0;
     width: 100%;
     height: 0;
-    transition: .5s;
+    transition: 1s;
     opacity: .5;
-    background-color: rgb(34, 215, 58);
-    z-index: -5;
+    background-color: #333;
+    z-index: -1;
 }
 
 .parent_div:hover::after {
@@ -833,8 +856,9 @@ img:hover {
 }
 
 .parent_div:hover p {
-    color: rgb(18, 233, 21);
+    color: #fff;
     transition: .5s;
+    z-index: 1;
     text-shadow: 1px 1px 1px black;
 }
 
@@ -842,6 +866,7 @@ img:hover {
     transition: .5s;
     color: rgb(54, 54, 129);
 }
+
 
 /****************************************************** section 9 News    *****************************************************/
 
@@ -864,21 +889,21 @@ img:hover {
 }
 
 .line_under_title {
-    width: 90px;
+    width: 80px;
     height: 5px;
-    background-color: rgba(13, 186, 19, 0.587);
+    background-color: #4169e1;
     display: block;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .news_container {
     width: 300px;
     height: 580px;
-    margin-top: 100px;
+    margin-top: 60px;
     margin-left: 50px;
     float: left;
-    box-shadow: 3px 3px 3px rgba(34, 215, 58, 0.316);
+    box-shadow: 3px 3px 3px rgba(0, 151, 251, 0.316);
     transition: 1s;
     position: relative;
     /* border: 1px solid black; */
@@ -910,7 +935,7 @@ img:hover {
 .img_info i {
     margin-left: 10px;
     margin-right: 5px;
-    color: rgba(10, 235, 81, 0.55);
+    color: #6195ff;
 }
 
 .container_sec9 .news_container h3 {
@@ -925,7 +950,7 @@ img:hover {
 }
 
 .container_sec9 .news_container p a {
-    color: rgba(6, 37, 238, 0.799);
+    color: #6195ff;
 }
 
 .container_sec9 .news_container .link_read {
@@ -941,16 +966,16 @@ img:hover {
     left: 0;
     width: 100%;
     height: 0;
-    background-color: rgba(34, 215, 58, 0.316);
+    background-color: #6196ff60;
     opacity: .9;
     transition: 1s;
-     /* z-index: -5; */
+    /* z-index: -5; */
 }
 
 .news_container:hover::after {
     width: 100%;
     height: 100%;
-   
+
 }
 
 /***************************************** Footer section *********************************************/
@@ -959,7 +984,7 @@ img:hover {
 footer {
     width: 100%;
     height: 300px;
-    background-color: rgba(2, 248, 35, 0.174);
+    background-color: #4c4d52;
     box-shadow: -10px 0px 8px rgb(131, 216, 131);
 }
 
@@ -988,7 +1013,7 @@ footer .content li {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: rgb(53, 138, 208);
+    background-color: #6195ff;
     text-align: center;
     display: inline-block;
     line-height: 1.9;
@@ -1001,14 +1026,14 @@ footer .content li a {
 }
 
 footer .content li:hover {
-    background-color: rgb(5, 245, 173);
+    background-color: #0954ec;
 }
 
 footer .content p {
     text-align: center;
     padding-top: 10px;
     text-transform: uppercase;
-    color: rgba(6, 111, 83, 0.642);
+    color: gray;
 }
 
 /*************************************** Finally , The End of The website  ****************************************/
